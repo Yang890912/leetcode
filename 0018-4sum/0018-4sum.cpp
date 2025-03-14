@@ -8,7 +8,7 @@ public:
             for(int j = i + 3; j < nums.size(); j++) {
                 int left = i + 1;
                 int right = j - 1;
-                long long newTarget = target - nums[i] - nums[j];
+                long long newTarget = (long long) target - nums[i] - nums[j];
 
                 while(left < right) {
                     if(nums[left] + nums[right] > newTarget) right--;
