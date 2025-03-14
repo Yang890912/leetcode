@@ -14,8 +14,7 @@ public:
                     if(nums[left] + nums[right] > newTarget) right--;
                     else if(nums[left] + nums[right] < newTarget) left++;
                     else {
-                        vector<int> vec = {nums[i], nums[left], nums[right], nums[j]};
-                        us.insert(vec);
+                        us.insert({nums[i], nums[left], nums[right], nums[j]});
                         left++;
                         right--;
                     }
