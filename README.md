@@ -1,3 +1,1 @@
-# leetcode
-[Leetcode
-](https://leetcode.com/u/Yang890912/)
+[Leetcode](https://leetcode.com/u/Yang890912/)
