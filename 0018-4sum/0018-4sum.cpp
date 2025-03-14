@@ -2,9 +2,14 @@ class Solution {
 public:
     vector<vector<int>> fourSum(vector<int>& nums, int target) {
         sort(nums.begin(), nums.end());
+        vector<vector<int>> res;
         set<vector<int>> us;
 
+        if(nums.size() < 4) return res;
+
         for(int i = 0; i < nums.size(); i++) {
+            if(i > 0 && nums[i] == nums[i - 1]) continue;
+
             for(int j = i + 3; j < nums.size(); j++) {
                 int left = i + 1;
                 int right = j - 1;
@@ -22,7 +27,6 @@ public:
             }
         }
 
-        vector<vector<int>> res;
         for (const auto& vec : us) {
             res.push_back(vec);
         }
