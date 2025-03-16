@@ -10,6 +10,7 @@ public:
 
             for(int i = 0; i < ranks.size(); i++) {
                 numOfRepair += sqrt(mid / ranks[i]);
+                if(numOfRepair >= cars) break;
             }
 
             if(numOfRepair >= cars) right = mid - 1;
