@@ -19,7 +19,7 @@ public:
 
         while(!pq.empty()) {
             int node = pq.top().second;
-            int time = pq.top().first;
+            long long time = pq.top().first;
             vector<pair<int, int>> neighbors = graph[node];
             pq.pop();
 
