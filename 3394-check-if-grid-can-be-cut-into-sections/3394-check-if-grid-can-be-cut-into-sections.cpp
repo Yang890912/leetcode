@@ -14,8 +14,8 @@ public:
             ys.push_back(vecY);
         }
 
-        sort(xs.begin(), xs.end(), cmp);
-        sort(ys.begin(), ys.end(), cmp);
+        sort(xs.begin(), xs.end());
+        sort(ys.begin(), ys.end());
         int lines = 0;
         int curr = xs[0][1];
         for(int i = 1 ; i < xs.size(); i++) {
@@ -40,10 +40,5 @@ public:
         }
 
         return false;
-    }
-
-    static bool cmp(const vector<int>& a, const vector<int>& b) {
-        if(a[0] == b[0]) return a[1] > b[1];
-        return a[0] < b[0];
     }
 };
