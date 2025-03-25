@@ -17,14 +17,24 @@ public:
         sort(xs.begin(), xs.end(), cmp);
         sort(ys.begin(), ys.end(), cmp);
         int lines = 0;
+        int curr = xs[0][1];
         for(int i = 1 ; i < xs.size(); i++) {
-            if(xs[i][0] < xs[i - 1][1]) continue;
+            if(xs[i][0] < curr) {
+                curr = max(curr, xs[i][1]);
+                continue;
+            }
+            curr = max(curr, xs[i][1]);
             lines++;
             if(lines >= 2) return true;
         }
         lines = 0;
+        curr = ys[0][1];
         for(int i = 1 ; i < ys.size(); i++) {
-            if(ys[i][0] < ys[i - 1][1]) continue;
+            if(ys[i][0] < curr) {
+                curr = max(curr, ys[i][1]);
+                continue;
+            }
+            curr = max(curr, ys[i][1]);
             lines++;
             if(lines >= 2) return true;
         }
