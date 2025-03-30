@@ -8,14 +8,14 @@ public:
             if(last[s[i] - 'a'] < i) last[s[i] - 'a'] = i;
         }
 
-        int i = 0;
-        while(i < s.size()) {
-            int currLast = last[s[i] - 'a'];
-            for(int j = i; j <= currLast; j++) {
+        int start = 0;
+        while(start < s.size()) {
+            int currLast = last[s[start] - 'a'];
+            for(int j = start; j <= currLast; j++) {
                 if(last[s[j] - 'a'] > currLast) currLast = last[s[j] - 'a'];
             }
-            res.push_back(currLast - i + 1);
-            i = currLast + 1;
+            res.push_back(currLast - start + 1);
+            start = currLast + 1;
         }
 
         return res;
