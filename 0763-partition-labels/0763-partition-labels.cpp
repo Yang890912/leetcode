@@ -4,8 +4,8 @@ public:
         vector<int> last(26, 0);
         vector<int> res;
 
-        for(int i = s.size() - 1; i >= 0 ; i--) {
-            if(last[s[i] - 'a'] < i) last[s[i] - 'a'] = i;
+        for(int i = 0; i < s.size(); i++) {
+            last[s[i] - 'a'] = i;
         }
 
         int start = 0;
