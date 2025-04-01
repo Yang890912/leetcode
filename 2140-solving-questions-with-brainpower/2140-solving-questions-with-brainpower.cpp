@@ -6,7 +6,7 @@ public:
         return rec(questions, 0, dp);
     }
 
-    long long rec(const vector<vector<int>> questions, int pos,  vector<long long>& dp) {
+    long long rec(vector<vector<int>>& questions, int pos,  vector<long long>& dp) {
         if(pos >= questions.size()) return 0;
         
         if(dp[pos] != -1) return dp[pos];
