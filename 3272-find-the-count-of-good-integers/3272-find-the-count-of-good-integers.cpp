@@ -7,15 +7,6 @@ public:
 
         genPalindrome(n, k, 0, num, numMap, res);
         
-        // int start = pow(10, n - 1);
-        // int end = pow(10, n) - 1;
-        // for(int i = start; i <= end; i++) {
-        //     string tmp = to_string(i);
-        //     sort(tmp.begin(), tmp.end());
-
-        //     if(numSet.count(tmp)) res++;
-        // }
-
         return res;
     }
 
@@ -66,7 +57,6 @@ public:
             }
             res -= tmp;
         }
-
         return res;
     }
 
@@ -76,5 +66,5 @@ public:
             res *= i;
         }
         return res;
-}
+    }
 };
