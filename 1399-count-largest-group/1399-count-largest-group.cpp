@@ -12,7 +12,7 @@ public:
                 sum += x % 10;
                 x /= 10;
             }
-            counts[sum] += 1;
+            counts[sum]++;
             currMaxSize = max(currMaxSize, counts[sum]);
         }
 
