@@ -8,7 +8,7 @@ public:
 
         for(int i = 0; i < word.size(); i++) {
             string subStr;
-            if(i + maxLen > word.size()) subStr = word.substr(i, word.size() - i);
+            if(i + maxLen > word.size()) subStr = word.substr(i);
             else subStr = word.substr(i, maxLen);
 
             if(subStr > res) res = subStr;
